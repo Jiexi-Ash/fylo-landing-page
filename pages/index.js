@@ -1,3 +1,5 @@
+import Hero from "components/Hero/Hero";
+import MainLayout from "components/UI/MainLayout";
 import Head from "next/head";
 import Image from "next/image";
 
@@ -10,7 +12,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <h1 className="text-red-500">HELLO</h1>
+      <MainLayout>
+        <Hero />
+      </MainLayout>
     </div>
   );
 }
