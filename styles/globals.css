@@ -7,3 +7,9 @@
     @apply font-openSans;
   }
 }
+
+@layer components {
+  .btn {
+    @apply w-full  py-3 text-center bg-brightBlue text-white rounded-md md:mt-0 hover:bg-[#6C9BFF];
+  }
+}
