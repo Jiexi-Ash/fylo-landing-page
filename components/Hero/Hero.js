@@ -1,7 +1,16 @@
-import React from "react";
+import { useState } from "react";
 import Image from "next/image";
-import Button from "components/UI/Button";
 function Hero() {
+  const [email, setEmail] = useState("");
+  const [error, setError] = useState("");
+  const handleClick = (e) => {
+    e.preventDefault();
+    if (!email || !email.includes("@")) {
+      setError("Please check your email");
+    } else {
+      setError("");
+    }
+  };
   return (
     <div className="px-8 py-24 container mx-auto max-w-8xl">
       <div className="flex flex-col justify-center items-center md:flex-row-reverse md:justify-between">
@@ -10,6 +19,7 @@ function Hero() {
             src="/images/illustration-1.svg"
             alt="illustration"
             layout="fill"
+            loading="lazy"
           />
         </div>
         <div className="flex flex-col pt-10 md:mr-16">
@@ -25,15 +35,24 @@ function Hero() {
             </p>
 
             <div className="pt-8 lg:max-w-lg">
-              <form className="flex flex-col space-y-4 lg:flex-row lg:items-center lg:space-x-4 lg:space-y-0">
+              <form
+                noValidate
+                onSubmit={handleClick}
+                className="flex flex-col space-y-4 lg:flex-row lg:items-center lg:space-x-4 lg:space-y-0"
+              >
                 <input
                   type="email"
                   placeholder="Enter your Email"
-                  className="border border-veryDarkBlue font-raleway px-4 py-3 rounded-lg w-full  placeholder:text-[12px] placeholder:text-lightGray placeholder:font-raleway focus:ring-0 focus:outline-none"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className={`${
+                    error ? "border-[#EF4877]" : "border-veryDarkBlue"
+                  } border  font-raleway px-4 py-3 rounded-lg w-full  placeholder:text-[12px] placeholder:text-lightGray placeholder:font-raleway focus:ring-0 focus:outline-none`}
                 />
 
                 <button className="btn">Get Started</button>
               </form>
+              {error && <p className="text-[#EF4877] text-sm py-1">{error}</p>}
             </div>
           </div>
         </div>

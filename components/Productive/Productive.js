@@ -3,13 +3,14 @@ import Image from "next/image";
 
 function Productive() {
   return (
-    <div className="px-8 py-24 container mx-auto max-w- bg-productiveMobile bg-cover bg-center md:bg-productiveDesktop">
+    <div className="px-8 py-24 container mx-auto max-w-8xl bg-productiveMobile bg-cover bg-center md:bg-productiveDesktop">
       <div className="flex flex-col justify-center items-center md:flex-row-reverse md:justify-between">
         <div className="relative h-44 w-72 md:w-96 md:h-80 lg:w-[640px] lg:h-[474px] ">
           <Image
             src="/images/illustration-2.svg"
             alt="illustration"
             layout="fill"
+            loading="lazy"
           />
         </div>
         <div className="grid grid-cols-1 place-items-center pt-20 md:place-items-start">
@@ -27,10 +28,13 @@ function Productive() {
             </p>
           </div>
 
-          <div className="py-9">
-            <h3 className="text-[12px] underline underline-offset-8 text-moderateCyan md:text-[16px]">
+          <div className="py-9 flex items-center space-x-1">
+            <h3 className="text-[12px] cursor-pointer underline underline-offset-8 text-moderateCyan md:text-[16px]">
               See how Fylo works
             </h3>
+            <div className="relative h-4 w-4 md:h-6 md:w-6">
+              <Image src="/images/icon-arrow.svg" alt="arrow" layout="fill" />
+            </div>
           </div>
 
           <div className="max-w-[240px] text-left md:ml-6 md:max-w-[300px]">
