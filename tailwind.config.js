@@ -10,8 +10,6 @@ module.exports = {
       md: "768px",
       lg: "976px",
       xl: "1440px",
-      "8xl": { max: "1440px" },
-      // => @media (max-width: 1535px) { ... }
     },
     extend: {
       colors: {
@@ -28,6 +26,10 @@ module.exports = {
       },
       maxWidth: {
         "8xl": "1440px",
+      },
+      backgroundImage: {
+        productiveMobile: "url(/images/bg-curve-mobile.svg)",
+        productiveDesktop: "url(/images/bg-curve-desktop.svg)",
       },
     },
   },

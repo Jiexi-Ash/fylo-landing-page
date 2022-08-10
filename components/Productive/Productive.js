@@ -3,7 +3,7 @@ import Image from "next/image";
 
 function Productive() {
   return (
-    <div className="px-8 py-24 container mx-auto max-w-8xl">
+    <div className="px-8 py-24 container mx-auto max-w- bg-productiveMobile bg-cover bg-center md:bg-productiveDesktop">
       <div className="flex flex-col justify-center items-center md:flex-row-reverse md:justify-between">
         <div className="relative h-44 w-72 md:w-96 md:h-80 lg:w-[640px] lg:h-[474px] ">
           <Image
@@ -13,11 +13,11 @@ function Productive() {
           />
         </div>
         <div className="grid grid-cols-1 place-items-center pt-20 md:place-items-start">
-          <div className="max-w-[320px] text-center md:text-left md:max-w-2xl">
+          <div className="max-w-[320px] text-center md:text-left  md:max-w-2xl">
             <h2 className="text-[16px]  font-bold text-veryDarkBlue py-4 md:text-[40px]">
               Stay productive, wherever you are
             </h2>
-            <p className="text-desaturatedBlue leading-[21px] text-sm md:text-lg   pb-4">
+            <p className="text-desaturatedBlue leading-[21px] text-sm md:text-lg     pb-4">
               Never let location be an issue when accessing your files. Fylo has
               you covered for all of your file storage needs.
             </p>
