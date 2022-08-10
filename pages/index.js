@@ -1,3 +1,4 @@
+import CTA from "components/CTA/CTA";
 import Hero from "components/Hero/Hero";
 import Productive from "components/Productive/Productive";
 import MainLayout from "components/UI/MainLayout";
@@ -16,6 +17,7 @@ export default function Home() {
       <MainLayout>
         <Hero />
         <Productive />
+        <CTA />
       </MainLayout>
     </div>
   );

@@ -6,6 +6,14 @@
   body {
     @apply font-openSans;
   }
+
+  p {
+    @apply font-openSans;
+  }
+
+  a {
+    @apply font-openSans;
+  }
 }
 
 @layer components {
