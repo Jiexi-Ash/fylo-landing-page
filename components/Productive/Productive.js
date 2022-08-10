@@ -28,12 +28,25 @@ function Productive() {
             </p>
           </div>
 
-          <div className="py-9 flex items-center space-x-1">
-            <h3 className="text-[12px] cursor-pointer underline underline-offset-8 text-moderateCyan md:text-[16px]">
-              See how Fylo works
-            </h3>
-            <div className="relative h-4 w-4 md:h-6 md:w-6">
-              <Image src="/images/icon-arrow.svg" alt="arrow" layout="fill" />
+          <div className="py-9">
+            <div className="flex items-center space-x-1 group">
+              <h3 className="text-[12px] cursor-pointer underline underline-offset-8 text-moderateCyan md:text-[16px] group-hover:cursor-pointer group-hover:text-[#71DFCC]">
+                See how Fylo works
+              </h3>
+              <div className="relative h-4 w-4 md:h-6 md:w-6 group-hover:text-[#71DFCC]">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  className="text-moderateCyan group-hover:text-[#71DFCC]"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              </div>
             </div>
           </div>
 
